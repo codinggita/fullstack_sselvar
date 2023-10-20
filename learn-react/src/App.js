@@ -6,18 +6,24 @@ import Effect from "./hooks/UseEffect/Effect";
 import Memo from "./hooks/UseMemo/Memo";
 import Reducer from "./hooks/UseReducer/Reducer";
 import Ref from "./hooks/UseRef/Ref";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
-     {/* <Counter/> */}
-     {/* <CounterFunctional/> */}
-     {/* {CounterFunctional()} */}
-     {/* <Reducer/> */}
-     {/* <Effect/> */}
-     {/* <Context /> */}
-     {/* <Memo/> */}
-     <CallBack/>
+    <Routes>
+      <Route path="/class" element={<Counter/>}/>
+      <Route path="/functional" element={<CounterFunctional/>}/>
+      <Route path="*" element={<h1>Not Found</h1>}/>
+    </Routes>
+     {/* <Counter/>
+     <CounterFunctional/>
+     {CounterFunctional()}
+     <Reducer/>
+     <Effect/>
+     <Context />
+     <Memo/>
+     <CallBack/> */}
     </>
   );
 }
