@@ -1,5 +1,6 @@
 import Counter from "./component/ClassBased";
 import CounterFunctional from "./component/Functional";
+import MyCounter from "./component/MyCounter";
 import CallBack from "./hooks/UseCallback/Callback";
 import Context from "./hooks/UseContext/Context";
 import Effect from "./hooks/UseEffect/Effect";
@@ -14,7 +15,7 @@ function App() {
     <Routes>
       <Route path="/class" element={<Counter/>}/>
       <Route path="/functional" element={<CounterFunctional/>}/>
-      <Route path="*" element={<h1>Not Found</h1>}/>
+      <Route path="*" element={<MyCounter />}/>
     </Routes>
      {/* <Counter/>
      <CounterFunctional/>
